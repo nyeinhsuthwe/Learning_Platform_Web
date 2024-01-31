@@ -10,7 +10,7 @@ const Layout = () => {
             <div>
             <div className="sticky-top">
         <Navbar className="fluid sticky-top py-1 bg-black border-bottom">
-          <h4 className=" fw-bold self-center whitespace-nowrap text-white text-xl font-semibold mt-1">
+          <h4 className=" fw-bold self-center whitespace-nowrap text-white text-xl font-semibold mt-1 ml-6">
             E-Learning
           </h4>
 
@@ -55,7 +55,7 @@ const Layout = () => {
 
           <NavLink to="/">
             <button type="button">
-              <i className="fa-solid fa-search text-white fs-5 me-3"></i>
+              <i className="fa-solid fa-search text-white fs-5 me-3 mr-6"></i>
             </button>
           </NavLink>
 
