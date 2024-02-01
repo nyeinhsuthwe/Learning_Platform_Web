@@ -1,37 +1,39 @@
 import '../../App.css'
-import { FaUserGraduate } from "react-icons/fa6";
-import { FaCode } from "react-icons/fa6";
-import { FaUserTie } from "react-icons/fa6";
+// import { FaUserGraduate } from "react-icons/fa6";
+// import { FaCode } from "react-icons/fa6";
+// import { FaUserTie } from "react-icons/fa6";
 import './Home.css'
 
 function Home() {
 
   return (
     <>
-       <div className='container-fluid '>
-        <div className="row ">
+      <div className='container-fluid '>
+        <div className="row h-screen items-center">
 
-          <div className="col-6" >
-          <h2 className='text-white fw-bold fs-3' style={{marginTop:'150px', marginLeft:'150px'}}>Learn with<br/></h2>
-          <span className='text-white fw-bold fs-3' id='color' style={{ marginLeft:'150px'}}>Experts Anytime,<br/></span>
-          <span className='text-white fw-bold fs-3' style={{ marginLeft:'150px'}}>Anywhere<br/></span>
-          <span className='font-semibold opacity-60 text-white' style={{marginLeft:'150px', fontSize:'15px'}}>Our mission is to help people to find the best course online &</span><br/>
-          <span className='font-semibold opacity-60 text-white' style={{marginLeft:'150px', fontSize:'15px'}}>learn with expert anytime, anywhere.</span>
+          <div className="col-4 offset-2 items-center " >
+            <div className='grid ps-8'>
+              <h1 className='text-white fw-bold fs-1' style={{}}>Learn with<br /></h1>
+              <span className='text-white fw-bold fs-1' id='color' style={{}}>Experts Anytime,<br /></span>
+              <span className='text-white fw-bold fs-1' style={{}}>Anywhere<br /></span>
+              <span className='font-semibold opacity-60 text-white' style={{ fontSize: '20px' }}>Our mission is to help people to find the best course online &</span><br />
+              <span className='font-semibold opacity-60 text-white' style={{ fontSize: '20px' }}>learn with expert anytime, anywhere.</span>
+            </div>
           </div>
 
-          <div className="col-6 ">
-    
-          <img src="/img/photo_2024-01-24_21-18-20-removebg-preview.png" style={{marginLeft:'40px'}} alt=""  />
+          <div className="grid col-6 justify-items-center">
+
+            <img src="/img/photo_2024-01-24_21-18-20-removebg-preview.png" style={{ marginLeft: '40px' }} alt="" />
           </div>
         </div>
 
         {/* for course section */}
-        <div>
+        {/* <div>
         <h3 className='text-white text-center font-semibold fs-4'>Popular Courses</h3>
-        </div>
+        </div> */}
 
         {/* benefit */}
-        <div className="row mx-auto">
+        {/* <div className="row mx-auto">
           <div className="col-6">
            <img src="/img/photo_2024-01-31_17-26-03-removebg-preview.png" style={{marginLeft:'180px' ,width:'400px', height:'380px'}} alt="" />
           </div>
@@ -65,8 +67,8 @@ function Home() {
              </div>
             </div>
           </div>
-        </div>
-    </div>
+        </div> */}
+      </div>
     </>
   )
 }
