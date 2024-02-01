@@ -1,0 +1,8 @@
+.navLink :hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+}
+
+.navLink {
+    padding: 3px;
+}
