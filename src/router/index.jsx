@@ -14,12 +14,24 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/home",
+        path: "",
         element: <Home />,
       },
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/course",
+        element: <Course />
+      },
+      {
+        path: "/course1",
+        element: <Course1 />
+      },
+      {
+        path: "/course2",
+        element: <Course2 />
       },
     ],
   },
@@ -27,18 +39,8 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <AdminLayout />,
     children: [
-            },
-            {
-                path: "/course",
-                element: <Course/>
-            },
-            {
-                path: "/course1",
-                element: <Course1/>
-            },
-            {
-                path: "/course2",
-                element: <Course2/>
+
+      
       {
         path: "",
         element: <AdminDashboard />,
