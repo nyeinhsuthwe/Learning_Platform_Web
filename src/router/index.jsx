@@ -1,25 +1,32 @@
-import {
-    createBrowserRouter,
-} from "react-router-dom";
-import Home from '../pages/user/Home'
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../pages/user/Home";
 import Layout from "../pages/user/layouts/Layout";
-import About from "../pages/user/About"
+import About from "../pages/user/About";
+import AdminLayout from "../pages/admin/layouts/AdminLayout";
+import AdminDashboard from "../pages/admin/AdminDashboard";
 import Course from "../pages/user/Course";
 import Course1 from "../pages/user/Course1";
 import Course2 from "../pages/user/Course2";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Layout />,
-        children: [
-            {
-                path: "/home",
-                element: <Home/>
-            },
-            {
-                path: "/about",
-                element: <About/>
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/home",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
             },
             {
                 path: "/course",
@@ -32,9 +39,12 @@ const router = createBrowserRouter([
             {
                 path: "/course2",
                 element: <Course2/>
-            }
-        ]
-    },
+      {
+        path: "",
+        element: <AdminDashboard />,
+      },
+    ],
+  },
 ]);
 
 export default router;
