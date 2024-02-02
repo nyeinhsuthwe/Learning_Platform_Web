@@ -3,6 +3,7 @@ import '../../App.css'
 // import { FaCode } from "react-icons/fa6";
 // import { FaUserTie } from "react-icons/fa6";
 import './Home.css'
+//import {motion} from 'framer-motion'
 
 function Home() {
 

@@ -4,3 +4,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+#fbg{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(74,9,121,1) 35%, rgba(2,169,203,1) 100%);
+}
