@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <>
-      <div className='container-fluid '>
+      <div className='container-fluid user-home'>
         <div className="row h-screen items-center">
 
           <div className="col-4 offset-2 items-center " >
