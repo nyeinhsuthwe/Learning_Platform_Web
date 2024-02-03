@@ -3,7 +3,7 @@ import '../../App.css'
 // import { FaCode } from "react-icons/fa6";
 // import { FaUserTie } from "react-icons/fa6";
 import './Home.css'
-//import {motion} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 function Home() {
 
@@ -14,18 +14,42 @@ function Home() {
 
           <div className="col-4 offset-2 items-center " >
             <div className='grid ps-8'>
+              <motion.div
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ x:-40, opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              
+              >
+              
               <h1 className='text-white fw-bold fs-1' style={{}}>Learn with<br /></h1>
               <span className='text-white fw-bold fs-1' id='color' style={{}}>Experts Anytime,<br /></span>
               <span className='text-white fw-bold fs-1' style={{}}>Anywhere<br /></span>
-              <span className='font-semibold opacity-60 text-white' style={{ fontSize: '20px' }}>Our mission is to help people to find the best course online &</span><br />
-              <span className='font-semibold opacity-60 text-white' style={{ fontSize: '20px' }}>learn with expert anytime, anywhere.</span>
+              </motion.div>
+              
+              <motion.div
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{x:-40, opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              >
+              <span className='font-semibold opacity-60 text-white' style={{ fontSize: '15px' }}>Our mission is to help people to find the best course online & learn with expert anytime, anywhere.</span>
+              </motion.div>
             </div>
           </div>
 
-          <div className="grid col-6 justify-items-center">
+          <motion.div className="grid col-6 justify-items-center"
+          whileHover={{ scale: 0.9 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
+          >
 
             <img src="/img/photo_2024-01-24_21-18-20-removebg-preview.png" style={{ marginLeft: '40px' }} alt="" />
-          </div>
+          </motion.div>
         </div>
 
         {/* for course section */}

@@ -5,15 +5,14 @@ import { NavLink } from "react-router-dom";
 
 const Course1 = () => {
   return (
-    <div>
-        <div className=" container">
-      <h1 className="fs-2 text-white font-semibold mt-4 text-center">
+    <div className=" container bg-black">
+      <h1 className="fs-2 text-white font-semibold pt-3 text-center">
         Our Courses
       </h1>
       <div className="row">
         <div className="col-4">
           <Card
-            className="max-w-sm mt-5"
+            className="max-w-sm mt-5 bg-black"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
             style={{width:'300px', marginLeft:'100px'}}
@@ -25,14 +24,14 @@ const Course1 = () => {
             
             <div className=" d-flex gap-3">
             <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
+            <span className="text-white bg-purple-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
             </div>
           </Card>
         </div>
 
         <div className="col-4">
           <Card
-            className="max-w-sm mt-5"
+            className="max-w-sm mt-5 bg-black"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
             style={{width:'300px', marginLeft:'50px'}}
@@ -43,7 +42,7 @@ const Course1 = () => {
             <span className="text-white">Chapters-16 lessons-106 <br/> fees: 120,000 MMK</span>
             
             <div className=" d-flex gap-3">
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
+            <span className="text-white bg-yellow-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
             <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
             </div>
           </Card>
@@ -51,7 +50,7 @@ const Course1 = () => {
 
         <div className="col-4">
           <Card
-            className="max-w-sm mt-5"
+            className="max-w-sm mt-5 bg-black"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
             style={{width:'300px'}}
@@ -62,15 +61,15 @@ const Course1 = () => {
             <span className="text-white">Chapters-16 lessons-106 <br/> fees: 120,000 MMK</span>
             
             <div className=" d-flex gap-3">
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
+            <span className="text-white bg-green-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
+            <span className="text-white bg-yellow-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
             </div>
           </Card>
         </div>
 
         <div className="col-4">
           <Card
-            className="max-w-sm mt-5"
+            className="max-w-sm mt-5 bg-black"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
             style={{width:'300px', marginLeft:'100px'}}
@@ -81,15 +80,15 @@ const Course1 = () => {
             <span className="text-white">Chapters-16 lessons-106 <br/> fees: 120,000 MMK</span>
             
             <div className=" d-flex gap-3">
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
+            <span className="text-white bg-red-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
+            <span className="text-white bg-purple-800 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
             </div>
           </Card>
         </div>
 
         <div className="col-4">
           <Card
-            className="max-w-sm mt-5"
+            className="max-w-sm mt-5 bg-black"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
             style={{width:'300px', marginLeft:'50px'}}
@@ -101,14 +100,14 @@ const Course1 = () => {
             
             <div className=" d-flex gap-3">
             <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
+            <span className="text-white bg-yellow-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
             </div>
           </Card>
         </div>
 
         <div className="col-4">
           <Card
-            className="max-w-sm mt-5"
+            className="max-w-sm mt-5 bg-black"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
             style={{width:'300px'}}
@@ -119,8 +118,8 @@ const Course1 = () => {
             <span className="text-white">Chapters-16 lessons-106 <br/> fees: 120,000 MMK</span>
             
             <div className=" d-flex gap-3">
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
-            <span className="text-white bg-blue-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
+            <span className="text-white bg-green-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>JavaScript</span>
+            <span className="text-white bg-yellow-600 w-20 text-center rounded-3 p-1" style={{fontSize:'13px'}}>React</span>
             </div>
           </Card>
         </div>
@@ -164,7 +163,6 @@ const Course1 = () => {
       <GrNext className='text-white fs-6 rounded-circle mx-auto' style={{backgroundColor:'purple', padding:'12px', width:'40px', height:'40px', marginTop:'70px', marginBottom:'70px'}} />
       </NavLink>
        </div>
-    </div>
     </div>
   )
 }
