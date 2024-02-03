@@ -14,8 +14,8 @@ const Layout = () => {
 
       {/* for nav */}
       <div>
-        <div className="sticky-top">
-          <Navbar className="fluid sticky-top py-1 bg-black border-bottom">
+        <div className="">
+          <Navbar className="fluid sticky-top py-1 bg-black border-bottom ">
             <h4 className=" fw-bold self-center whitespace-nowrap text-white text-xl font-semibold mt-1 ml-6">
               E-Learning
             </h4>
@@ -123,8 +123,8 @@ const Layout = () => {
 
       {/* Footer */}
 
-      <Footer container id='fbg' >
-        <div className="w-full">
+      <Footer container id='fbg'>
+        <div className="w-full" >
           <div className="row mx-auto">
             <div className="col ml-11 px-5 ">
               <span
