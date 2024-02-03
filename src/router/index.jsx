@@ -7,6 +7,9 @@ import AdminDashboard from "../pages/admin/AdminDashboard";
 import Course from "../pages/user/Course";
 import Course1 from "../pages/user/Course1";
 import Course2 from "../pages/user/Course2";
+import CourseManagement from "../pages/admin/CourseManagement";
+import FeedbackReviews from "../pages/admin/FeedbackReviews";
+import StudentManagement from "../pages/admin/StudentManagement";
 
 const router = createBrowserRouter([
   {
@@ -23,15 +26,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/course",
-        element: <Course />
+        element: <Course />,
       },
       {
         path: "/course1",
-        element: <Course1 />
+        element: <Course1 />,
       },
       {
         path: "/course2",
-        element: <Course2 />
+        element: <Course2 />,
       },
     ],
   },
@@ -39,11 +42,21 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <AdminLayout />,
     children: [
-
-      
       {
-        path: "",
+        path: "/admin/dashboard",
         element: <AdminDashboard />,
+      },
+      {
+        path: "/admin/course",
+        element: <CourseManagement />,
+      },
+      {
+        path: "/admin/feedback",
+        element: <FeedbackReviews />,
+      },
+      {
+        path: "/admin/students",
+        element: <StudentManagement />,
       },
     ],
   },

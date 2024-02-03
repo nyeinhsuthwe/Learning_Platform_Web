@@ -8,12 +8,25 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { Link, Outlet } from "react-router-dom";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Students Management", href: "#", icon: UsersIcon, current: false },
-  { name: "Courses Management", href: "#", icon: FolderIcon, current: false },
-  { name: "Feedback and Reviews", href: "#", icon: InboxIcon, current: false },
+  { name: "Dashboard", to: "/admin/dashboard", icon: HomeIcon },
+  {
+    name: "Students Management",
+    to: "/admin/students",
+    icon: UsersIcon,
+  },
+  {
+    name: "Courses Management",
+    to: "/admin/course",
+    icon: FolderIcon,
+  },
+  {
+    name: "Feedback and Reviews",
+    to: "/admin/feedback",
+    icon: InboxIcon,
+  },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -88,30 +101,26 @@ export default function AdminLayout() {
                       Welcome to Admin Panel
                     </p>
                   </div>
-                  <div className="mt-5 h-0 flex-1 overflow-y-auto">
-                    <nav className="space-y-1 px-2">
+                  <div className="mt-2 h-0 flex-1 overflow-y-auto">
+                    <nav className="flex-1 space-y-1 px-2 py-4">
                       {navigation.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
-                          href={item.href}
+                          to={item.to}
                           className={classNames(
-                            item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                            "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                            "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                           )}
                         >
                           <item.icon
                             className={classNames(
-                              item.current
-                                ? "text-gray-300"
-                                : "text-gray-400 group-hover:text-gray-300",
-                              "mr-4 flex-shrink-0 h-6 w-6"
+                              "text-gray-400 group-hover:text-gray-300",
+                              "mr-3 flex-shrink-0 h-6 w-6"
                             )}
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       ))}
                     </nav>
                   </div>
@@ -135,27 +144,23 @@ export default function AdminLayout() {
             <div className="flex flex-1 flex-col overflow-y-auto">
               <nav className="flex-1 space-y-1 px-2 py-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.to}
                     className={classNames(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "text-gray-300 hover:bg-gray-700 hover:text-white",
                       "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     )}
                   >
                     <item.icon
                       className={classNames(
-                        item.current
-                          ? "text-gray-300"
-                          : "text-gray-400 group-hover:text-gray-300",
+                        "text-gray-400 group-hover:text-gray-300",
                         "mr-3 flex-shrink-0 h-6 w-6"
                       )}
                       aria-hidden="true"
                     />
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
@@ -199,15 +204,15 @@ export default function AdminLayout() {
                       {userNavigation.map((item) => (
                         <Menu.Item key={item.name}>
                           {({ active }) => (
-                            <a
-                              href={item.href}
+                            <Link
+                              to={item.to}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               {item.name}
-                            </a>
+                            </Link>
                           )}
                         </Menu.Item>
                       ))}
@@ -219,14 +224,9 @@ export default function AdminLayout() {
           </div>
 
           <main className="flex-1">
-            <div className="py-6">
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                <h1 className="text-2xl font-semibold text-gray-900">
-                  Dashboard
-                </h1>
-              </div>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                <h1>Hello World</h1>
+            <div className="py-2">
+              <div className="mx-auto mt-5 max-w-7xl px-4 sm:px-6 md:px-8">
+                <Outlet />
               </div>
             </div>
           </main>
