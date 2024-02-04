@@ -5,8 +5,6 @@ import About from "../pages/user/About";
 import AdminLayout from "../pages/admin/layouts/AdminLayout";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import Course from "../pages/user/Course";
-import Course1 from "../pages/user/Course1";
-import Course2 from "../pages/user/Course2";
 import CourseManagement from "../pages/admin/CourseManagement";
 import FeedbackReviews from "../pages/admin/FeedbackReviews";
 import StudentManagement from "../pages/admin/StudentManagement";
@@ -30,17 +28,13 @@ const router = createBrowserRouter([
         element: <Course />,
       },
       {
-        path: "/course1",
-        element: <Course1 />,
-      },
-      {
-        path: "/course2",
-        element: <Course2 />,
+        path: "course/page/:pageNumber",
+        element: <Course />,
       },
       {
         path: "/course/details/ep1",
-        element: <CourseDetail/>
-      }
+        element: <CourseDetail />,
+      },
     ],
   },
   {
