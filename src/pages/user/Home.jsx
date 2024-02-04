@@ -1,101 +1,199 @@
-import '../../App.css'
+import "../../App.css";
 // import { FaUserGraduate } from "react-icons/fa6";
 // import { FaCode } from "react-icons/fa6";
 // import { FaUserTie } from "react-icons/fa6";
-import './Home.css'
-import {motion} from 'framer-motion'
+import "./Home.css";
+import { motion } from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
+  const coursesData = [
+    {
+      id: 1,
+      title: "React + Firebase",
+      chapters: 16,
+      lessons: 106,
+      fees: "120,000 MMK",
+      tags: ["JavaScript", "React"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+    },
+    {
+      id: 2,
+      title: "Node.js Basics",
+      chapters: 12,
+      lessons: 80,
+      fees: "90,000 MMK",
+      tags: ["JavaScript", "Node.js"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+    },
+    {
+      id: 3,
+      title: "Python Fundamentals",
+      chapters: 20,
+      lessons: 120,
+      fees: "150,000 MMK",
+      tags: ["Python"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png",
+    },
+    {
+      id: 4,
+      title: "Vue.js Mastery",
+      chapters: 18,
+      lessons: 95,
+      fees: "110,000 MMK",
+      tags: ["JavaScript", "Vue.js"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/vue-9-logo-png-transparent.png",
+    },
+    {
+      id: 5,
+      title: "Java Programming",
+      chapters: 15,
+      lessons: 100,
+      fees: "130,000 MMK",
+      tags: ["Java"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/vue-9-logo-png-transparent.png",
+    },
+    {
+      id: 6,
+      title: "Angular Essentials",
+      chapters: 14,
+      lessons: 85,
+      fees: "100,000 MMK",
+      tags: ["JavaScript", "Angular"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/vue-9-logo-png-transparent.png",
+    },
+    {
+      id: 7,
+      title: "HTML5 & CSS3",
+      chapters: 10,
+      lessons: 60,
+      fees: "80,000 MMK",
+      tags: ["HTML", "CSS"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+    },
+    {
+      id: 8,
+      title: "Django Web Development",
+      chapters: 22,
+      lessons: 130,
+      fees: "160,000 MMK",
+      tags: ["Python", "Django"],
+      imageSrc:
+        "https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png",
+    },
+  ];
 
+  const sliderSettings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+  };
   return (
     <>
-      <div className='container-fluid user-home'>
+      <div className="container-fluid user-home">
         <div className="row h-screen items-center">
-
-          <div className="col-4 offset-2 items-center " >
-            <div className='grid ps-8'>
+          <div className="col-4 offset-2 items-center ">
+            <div className="grid ps-8">
               <motion.div
-              whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ x:-40, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
-              
+                whileHover={{ scale: 0.9 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ x: -40, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
               >
-              
-              <h1 className='text-white fw-bold fs-1' style={{}}>Learn with<br /></h1>
-              <span className='text-white fw-bold fs-1' id='color' style={{}}>Experts Anytime,<br /></span>
-              <span className='text-white fw-bold fs-1' style={{}}>Anywhere<br /></span>
+                <h1 className="text-white fw-bold fs-1" style={{}}>
+                  Learn with
+                  <br />
+                </h1>
+                <span className="text-white fw-bold fs-1" id="color" style={{}}>
+                  Experts Anytime,
+                  <br />
+                </span>
+                <span className="text-white fw-bold fs-1" style={{}}>
+                  Anywhere
+                  <br />
+                </span>
               </motion.div>
-              
+
               <motion.div
-              whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{x:-40, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4 }}
+                whileHover={{ scale: 0.9 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ x: -40, opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
               >
-              <span className='font-semibold opacity-60 text-white' style={{ fontSize: '15px' }}>Our mission is to help people to find the best course online & learn with expert anytime, anywhere.</span>
+                <span
+                  className="font-semibold opacity-60 text-white"
+                  style={{ fontSize: "15px" }}
+                >
+                  Our mission is to help people to find the best course online &
+                  learn with an expert anytime, anywhere.
+                </span>
               </motion.div>
             </div>
           </div>
 
-          <motion.div className="grid col-6 justify-items-center"
-          whileHover={{ scale: 0.9 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
+          <motion.div
+            className="grid col-6 justify-items-center"
+            whileHover={{ scale: 0.9 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4 }}
           >
-
-            <img src="/img/photo_2024-01-24_21-18-20-removebg-preview.png" style={{ marginLeft: '40px' }} alt="" />
+            <img
+              src="/img/photo_2024-01-24_21-18-20-removebg-preview.png"
+              style={{ marginLeft: "40px" }}
+              alt=""
+            />
           </motion.div>
         </div>
 
-        {/* for course section */}
-        {/* <div>
-        <h3 className='text-white text-center font-semibold fs-4'>Popular Courses</h3>
-        </div> */}
+        {/* Horizontal Course Slider */}
+        <div className="container bg-black">
+          <h3 className="text-white text-center font-semibold fs-4 mb-5">
+            Popular Courses
+          </h3>
 
-        {/* benefit */}
-        {/* <div className="row mx-auto">
-          <div className="col-6">
-           <img src="/img/photo_2024-01-31_17-26-03-removebg-preview.png" style={{marginLeft:'180px' ,width:'400px', height:'380px'}} alt="" />
-          </div>
-          <div className="col-6">
-            <h5 className='text-white font-semibold mt-7 mb-7 fw-bold'>Benefit from our Online Learning</h5>
+          <Slider {...sliderSettings}>
+            {coursesData.map((course) => (
+              <div
+                key={course.id}
+                className="bg-white h-[400px] text-black rounded-xl mb-5"
+              >
+                <div className="h-52 bg-indigo-500 flex justify-center items-center rounded-t-xl">
+                  <img
+                    src={course.imageSrc}
+                    alt={course.title}
+                    className="h-32 w-32 rounded-full"
+                  />
+                </div>
 
-            <div className='d-flex mb-4'>
-            <div><FaCode className='text-white mb-4 fs-6 rounded-circle bg-blue-500' style={{ padding:'12px', width:'40px', height:'40px'}} /></div>
-             <div className='me-7'>
-             <span className='ml-4 text-white font-semibold'>Short Courses</span><br/>
-             <span className='ml-4 text-white font-semibold opacity-60' style={{fontSize:'12px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><br/>
-             <span className='ml-4 text-white font-semibold opacity-60' style={{fontSize:'12px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-             </div>
-            </div>
-            <div className='d-flex mb-4'>
-            <div><FaUserGraduate className='text-white mb-4 fs-6 rounded-circle' style={{backgroundColor:'purple', padding:'12px', width:'40px', height:'40px'}} /></div>
-             <div className=''>
-             <span className='ml-4 text-white font-semibold'>Online Degrees</span><br/>
-             <span className='ml-4 text-white font-semibold opacity-60' style={{fontSize:'12px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><br/>
-             <span className='ml-4 text-white font-semibold opacity-60' style={{fontSize:'12px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-             </div>
-            </div>
-
-
-            <div className='d-flex mb-4'>
-            <div><FaUserTie className='text-white mb-4 fs-6 rounded-circle bg-blue-800' style={{ padding:'12px', width:'40px', height:'40px'}} /></div>
-             <div className='me-7'>
-             <span className='ml-4 text-white font-semibold'>Online Degrees</span><br/>
-             <span className='ml-4 text-white font-semibold opacity-60' style={{fontSize:'12px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><br/>
-             <span className='ml-4 text-white font-semibold opacity-60' style={{fontSize:'12px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-             </div>
-            </div>
-          </div>
-        </div> */}
+                <div className="flex flex-col items-center justify-center gap-2 p-4">
+                  <p className="text-lg font-semibold">{course.title}</p>
+                  <p className="text-center">{`${course.chapters} chapters, ${course.lessons} lessons`}</p>
+                  <p className="text-center">{`Fees: ${course.fees}`}</p>
+                  <button className="bg-indigo-500 text-white text-md px-4 py-1 rounded-xl">
+                    Read More
+                  </button>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </>
-  )
+  );
 }
 
 export default Home;
