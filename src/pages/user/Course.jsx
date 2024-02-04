@@ -104,14 +104,14 @@ const Course = () => {
   const currentCourses = coursesData.slice(startIndex, endIndex);
 
   return (
-    <div className="container bg-black">
+    <div className="container-fluid bg-black">
       <h1 className="fs-2 text-white font-semibold pt-3 text-center">
         Our Courses
       </h1>
 
       <div className="row">
         {currentCourses.map((course) => (
-          <div key={course.id} className="col-4">
+          <div key={course.id} className="col-lg-4 col-md-6 col-sm-12">
             <Card
               className="max-w-sm mt-5 bg-black"
               imgAlt="Course Image"
