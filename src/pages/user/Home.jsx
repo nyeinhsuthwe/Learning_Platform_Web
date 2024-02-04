@@ -9,10 +9,10 @@ function Home() {
 
   return (
     <>
-      <div className='container-fluid user-home'>
+      <div className='container-fluid user-home mx-auto ps-4'>
         <div className="row h-screen items-center">
 
-          <div className="col-4 offset-2 items-center " >
+          <div className="col offset-2 items-center " >
             <div className='grid ps-8'>
               <motion.div
               whileHover={{ scale: 0.9 }}
@@ -23,7 +23,7 @@ function Home() {
               
               >
               
-              <h1 className='text-white fw-bold fs-1' style={{}}>Learn with<br /></h1>
+              <h1 className='text-white fw-bold fs-1'  style={{}}>Learn with<br /></h1>
               <span className='text-white fw-bold fs-1' id='color' style={{}}>Experts Anytime,<br /></span>
               <span className='text-white fw-bold fs-1' style={{}}>Anywhere<br /></span>
               </motion.div>
@@ -40,7 +40,7 @@ function Home() {
             </div>
           </div>
 
-          <motion.div className="grid col-6 justify-items-center"
+          <motion.div className="grid col  justify-items-center"
           whileHover={{ scale: 0.9 }}
           whileTap={{ scale: 0.9 }}
           initial={{ opacity: 0, scale: 0.5 }}
@@ -48,7 +48,7 @@ function Home() {
           transition={{ duration: 0.4 }}
           >
 
-            <img src="/img/photo_2024-01-24_21-18-20-removebg-preview.png" style={{ marginLeft: '40px' }} alt="" />
+            <img src="/img/photo_2024-01-24_21-18-20-removebg-preview.png" alt="" style={{height:'500px', width:"580px", marginRight:'170px'}} />
           </motion.div>
         </div>
 

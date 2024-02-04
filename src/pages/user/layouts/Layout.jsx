@@ -15,7 +15,7 @@ const Layout = () => {
       {/* for nav */}
       <div>
         <div className="">
-          <Navbar className="fluid sticky-top py-1 bg-black border-bottom ">
+          <Navbar className="fluid sticky-top py-1 bg-black ">
             <h4 className=" fw-bold self-center whitespace-nowrap text-white text-xl font-semibold mt-1 ml-6">
               E-Learning
             </h4>
