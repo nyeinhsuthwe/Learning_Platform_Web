@@ -116,7 +116,7 @@ const Course = () => {
               className="max-w-sm mt-5 bg-black"
               imgAlt="Course Image"
               imgSrc={course.imageSrc}
-              style={{ width: "300px" }}
+              style={{ width: "300px", height: "auto" }}
             >
               <span className="fs-5 font-semibold text-white">
                 {course.title}
@@ -143,7 +143,11 @@ const Course = () => {
       </div>
 
       <div className="d-flex justify-center gap-3">
-        <NavLink to="/course">
+        <NavLink
+          to={`/course/page/${currentPage - 1}`}
+          onClick={() => setCurrentPage((prevPage) => prevPage - 1)}
+          disabled={currentPage === 1}
+        >
           <GrPrevious
             className="text-white fs-6 rounded-circle mx-auto"
             style={{
@@ -169,8 +173,8 @@ const Course = () => {
                 height: "40px",
                 marginTop: "70px",
                 marginBottom: "70px",
-                backgroundColor: currentPage === index + 1 ? "purple" : "white",
-                color: currentPage === index + 1 ? "white" : "purple",
+                backgroundColor: currentPage === index + 1 ? "white" : "purple",
+                color: currentPage === index + 1 ? "purple" : "white",
               }}
               onClick={() => setCurrentPage(index + 1)}
             >
@@ -179,7 +183,11 @@ const Course = () => {
           </NavLink>
         ))}
 
-        <NavLink to={`/course/page/${totalPages}`}>
+        <NavLink
+          to={`/course/page/${currentPage + 1}`}
+          onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
+          disabled={currentPage === totalPages}
+        >
           <GrNext
             className="text-white fs-6 rounded-circle mx-auto"
             style={{
