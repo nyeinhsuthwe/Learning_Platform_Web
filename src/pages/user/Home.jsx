@@ -160,7 +160,7 @@ function Home() {
         </div>
 
         {/* Horizontal Course Slider */}
-        <div className="container bg-black">
+        <div className="container bg-black h-screen">
           <h3 className="text-white text-center font-semibold fs-4 mb-5">
             Popular Courses
           </h3>
