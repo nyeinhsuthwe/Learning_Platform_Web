@@ -24,7 +24,7 @@ const Layout = () => {
 
               <Navbar className="mx-auto bg-black">
                 <NavLink
-                  to="/home"
+                  to="/"
                   style={{ textDecoration: "none", marginLeft: "50px" }}
                 >
                   <span
@@ -34,14 +34,14 @@ const Layout = () => {
                     Home
                   </span>
                 </NavLink>
-                <NavLink to="/" style={{ textDecoration: "none" }}>
+                {/* <NavLink to="/" style={{ textDecoration: "none" }}>
                   <span
                     className="text-white fw-bold ml-5 mr-5"
                     style={{ fontSize: "13px" }}
                   >
                     Explore
                   </span>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="/course" style={{ textDecoration: "none" }}>
                   <span
                     className="text-white fw-bold ml-5 mr-5"
@@ -51,14 +51,14 @@ const Layout = () => {
                   </span>
                 </NavLink>
 
-                <NavLink to="/" style={{ textDecoration: "none" }} className="navLink">
+                {/* <NavLink to="/" style={{ textDecoration: "none" }} className="navLink">
                   <span
                     className="text-white fw-bold ml-5 mr-5"
                     style={{ fontSize: "13px" }}
                   >
                     About
                   </span>
-                </NavLink>
+                </NavLink> */}
               </Navbar>
 
             </Navbar>

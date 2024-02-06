@@ -7,7 +7,7 @@ import useFetch from "../../hooks/useFetch";
 const Course = () => {
 
   let [url, setUrl] = useState("http://localhost:3001/courses")
-  let { data: courses, loading, error } = useFetch(url, {type : "GET"});
+  let { data: courses, loading } = useFetch(url, {type : "GET"});
   
   // {!error && console.log(courses.length);}
   console.log(courses);
@@ -32,7 +32,7 @@ const Course = () => {
   const currentCourses = courses.slice(startIndex, endIndex);
 
   return (
-    <div className="container-fluid bg-black">
+    <div className="container-fluid bg-black px-80">
       <h1 className="fs-2 text-white font-semibold pt-3 text-center">
         Our Courses
       </h1>
@@ -40,7 +40,7 @@ const Course = () => {
       {loading && <h1 className="text-bold text-white-50">Loading.....</h1>}
       {!loading && <><div className="row">
         {currentCourses.map((course) => (
-          <div key={course.id} className="col-lg-4 col-md-6 col-sm-12">
+          <NavLink to="/course/details/ep1" key={course.id} className="col-lg-4 col-md-6 col-sm-12">
             <Card
               className="max-w-sm mt-5 bg-black"
               imgAlt="Course Image"
@@ -67,7 +67,7 @@ const Course = () => {
                 ))}
               </div>
             </Card>
-          </div>
+          </NavLink>
         ))}
       </div>
 

@@ -135,7 +135,7 @@ function Home() {
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ x: -40, opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 2 }}
               >
                 <h1 className="text-white fw-bold fs-1" style={{}}>
                   Learn with
@@ -156,7 +156,7 @@ function Home() {
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ x: -40, opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 2 }}
               >
                 <span
                   className="font-semibold opacity-60 text-white"
@@ -175,7 +175,7 @@ function Home() {
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 2 }}
           >
             <img
               src="/img/photo_2024-01-24_21-18-20-removebg-preview.png"
