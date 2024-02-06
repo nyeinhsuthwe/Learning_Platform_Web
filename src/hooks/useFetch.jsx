@@ -6,9 +6,9 @@ import { useEffect, useState } from "react";
 
 let useFetch = (url) => {
 
-    let [data, setData] = useState(null);
+    let [data, setData] = useState([]);
     let [loading, setLoading] = useState(false);
-    let [error, setError] = useState(null);
+    let [error, setError] = useState([]);
 
     useEffect(() => {
 
@@ -44,3 +44,4 @@ let useFetch = (url) => {
 }
 
 export default useFetch;
+

@@ -1,97 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "flowbite-react";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 const Course = () => {
-  const coursesData = [
-    {
-      id: 1,
-      title: "React + Firebase",
-      chapters: 16,
-      lessons: 106,
-      fees: "120,000 MMK",
-      tags: ["JavaScript", "React"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
-    },
-    {
-      id: 2,
-      title: "Node.js Basics",
-      chapters: 12,
-      lessons: 80,
-      fees: "90,000 MMK",
-      tags: ["JavaScript", "Node.js"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
-    },
-    {
-      id: 3,
-      title: "Python Fundamentals",
-      chapters: 20,
-      lessons: 120,
-      fees: "150,000 MMK",
-      tags: ["Python"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png",
-    },
-    {
-      id: 4,
-      title: "Vue.js Mastery",
-      chapters: 18,
-      lessons: 95,
-      fees: "110,000 MMK",
-      tags: ["JavaScript", "Vue.js"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/vue-9-logo-png-transparent.png",
-    },
-    {
-      id: 5,
-      title: "Java Programming",
-      chapters: 15,
-      lessons: 100,
-      fees: "130,000 MMK",
-      tags: ["Java"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/vue-9-logo-png-transparent.png",
-    },
-    {
-      id: 6,
-      title: "Angular Essentials",
-      chapters: 14,
-      lessons: 85,
-      fees: "100,000 MMK",
-      tags: ["JavaScript", "Angular"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/vue-9-logo-png-transparent.png",
-    },
-    {
-      id: 7,
-      title: "HTML5 & CSS3 Fundamentals",
-      chapters: 10,
-      lessons: 60,
-      fees: "80,000 MMK",
-      tags: ["HTML", "CSS"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
-    },
-    {
-      id: 8,
-      title: "Django Web Development",
-      chapters: 22,
-      lessons: 130,
-      fees: "160,000 MMK",
-      tags: ["Python", "Django"],
-      imageSrc:
-        "https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png",
-    },
-  ];
 
+  let [url, setUrl] = useState("http://localhost:3001/courses")
+  let { data: courses, loading, error } = useFetch(url, {type : "GET"});
+  
+  // {!error && console.log(courses.length);}
+  console.log(courses);
+  
   // Number of courses to display per page
   const coursesPerPage = 6;
 
   // Calculate the total number of pages
-  const totalPages = Math.ceil(coursesData.length / coursesPerPage);
+  const totalPages = Math.ceil(courses.length / coursesPerPage);
+  // let [ totalPages, setTotalPages ] = useState(0);
+
+  // useEffec
 
   // State to manage the current page
   const [currentPage, setCurrentPage] = useState(1);
@@ -101,7 +29,7 @@ const Course = () => {
   const endIndex = startIndex + coursesPerPage;
 
   // Get the courses to display on the current page
-  const currentCourses = coursesData.slice(startIndex, endIndex);
+  const currentCourses = courses.slice(startIndex, endIndex);
 
   return (
     <div className="container-fluid bg-black">
@@ -109,7 +37,8 @@ const Course = () => {
         Our Courses
       </h1>
 
-      <div className="row">
+      {loading && <h1 className="text-bold text-white-50">Loading.....</h1>}
+      {!loading && <><div className="row">
         {currentCourses.map((course) => (
           <div key={course.id} className="col-lg-4 col-md-6 col-sm-12">
             <Card
@@ -200,9 +129,12 @@ const Course = () => {
             }}
           />
         </NavLink>
-      </div>
+      </div></>}
     </div>
+    
   );
 };
 
 export default Course;
+
+
