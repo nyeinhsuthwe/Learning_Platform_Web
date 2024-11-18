@@ -32,7 +32,7 @@ const Course = () => {
   const currentCourses = courses.slice(startIndex, endIndex);
 
   return (
-    <div className="container-fluid bg-black px-80">
+    <div className="container-fluid bg-black" style={{paddingLeft:'90px'}}>
       <h1 className="fs-2 text-white font-semibold pt-3 text-center">
         Our Courses
       </h1>
@@ -42,7 +42,7 @@ const Course = () => {
         {currentCourses.map((course) => (
           <NavLink to="/course/details/ep1" key={course.id} className="col-lg-4 col-md-6 col-sm-12">
             <Card
-              className="max-w-sm mt-5 bg-black"
+              className="max-w-sm mt-5 bg-black gap-3"
               imgAlt="Course Image"
               imgSrc={course.imageSrc}
               style={{ width: "300px", height: "auto" }}
